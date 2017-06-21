@@ -666,6 +666,10 @@
 {
     // We create the views in code for primarily for ease of upgrades and not requiring an external .xib to be included
 
+    //Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A501 Safari/9537.53
+   // zmoreira - set user agent 
+ NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A501 Safari/9537.53", @"UserAgent", nil];
+[[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
     CGRect webViewBounds = self.view.bounds;
     //BOOL toolbarIsAtBottom = ![_browserOptions.toolbarposition isEqualToString:kThemeableBrowserToolbarBarPositionTop];
     BOOL toolbarIsAtBottom = true;
