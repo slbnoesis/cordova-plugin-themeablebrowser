@@ -237,11 +237,11 @@
     }
 
     if (self.themeableBrowserViewController == nil) {
-        NSString* originalUA = @"Mozila";
+        NSString* originalUA = [CDVUserAgentUtil originalUserAgent];
         self.themeableBrowserViewController = [[CDVThemeableBrowserViewController alloc]
                                                initWithUserAgent:originalUA prevUserAgent:[self.commandDelegate userAgent]
                                                browserOptions: browserOptions
-                                               navigationDelete:self
+                                               navigationDeleteNSString* originalUA = [CDVUserAgentUtil originalUserAgent];:self
                                                statusBarStyle:[UIApplication sharedApplication].statusBarStyle];
 
         if ([self.viewController conformsToProtocol:@protocol(CDVScreenOrientationDelegate)]) {
