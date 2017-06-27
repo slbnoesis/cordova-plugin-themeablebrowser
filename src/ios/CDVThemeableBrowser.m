@@ -237,9 +237,7 @@
     }
 
     if (self.themeableBrowserViewController == nil) {
-        /* NSString* originalUA = [CDVUserAgentUtil originalUserAgent]; */
-     NSString* originalUA = [@"Mozila SLBenfica" retain];
-
+        NSString* originalUA = @"Mozila";
         self.themeableBrowserViewController = [[CDVThemeableBrowserViewController alloc]
                                                initWithUserAgent:originalUA prevUserAgent:[self.commandDelegate userAgent]
                                                browserOptions: browserOptions
