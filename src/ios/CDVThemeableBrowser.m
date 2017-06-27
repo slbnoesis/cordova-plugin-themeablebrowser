@@ -241,7 +241,7 @@
         self.themeableBrowserViewController = [[CDVThemeableBrowserViewController alloc]
                                                initWithUserAgent:originalUA prevUserAgent:[self.commandDelegate userAgent]
                                                browserOptions: browserOptions
-                                               navigationDeleteNSString* originalUA = [CDVUserAgentUtil originalUserAgent];:self
+                                               navigationDelete:self
                                                statusBarStyle:[UIApplication sharedApplication].statusBarStyle];
 
         if ([self.viewController conformsToProtocol:@protocol(CDVScreenOrientationDelegate)]) {
