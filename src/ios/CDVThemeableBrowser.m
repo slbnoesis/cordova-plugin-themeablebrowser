@@ -1155,6 +1155,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIApplication *app = [UIApplication sharedApplication];
+    CGFloat statusBarHeight = app.statusBarFrame.size.height;
+
+    UIView *statusBarView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, statusBarHeight)];
+    statusBarView.backgroundColor  =  [UIColor whiteColor];
+    [self.view addSubview:statusBarView];
 }
 
 - (void)viewDidUnload
